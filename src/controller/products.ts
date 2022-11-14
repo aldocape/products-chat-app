@@ -1,12 +1,12 @@
 // import { productsObj } from './files';
 import { Producto } from '../interfaces';
-import { mariaDB } from '../services/db';
+import { SQLiteDB } from '../services/db';
 
 import SQLClient from '../services/products';
 
 // Instancio la clase, pasando al constructor el objeto con los datos de configuración de mariaDB
 // y el nombre de la tabla que va a utilizar
-const sql = new SQLClient(mariaDB, 'products');
+const sql = new SQLClient(SQLiteDB, 'products');
 
 export const add = async (prod: Producto) => {
   try {
