@@ -13,8 +13,8 @@ const morgan_1 = __importDefault(require("morgan"));
 // y se vuelven a crear con datos de prueba 'hardcodeados' que se cargan en la misma función
 // Para cambiar este comportamiento, comentar el import y la función de las 2 líneas de abajo una vez creadas las tablas
 // De esta manera, los datos que se carguen persisten en las bases de datos correspondientes
-// import { createTables } from '../utils/createTables';
-// createTables();
+const createTables_1 = require("../utils/createTables");
+createTables_1.createTables();
 // Importo librería socket.io
 const io = require('socket.io');
 const app = express_1.default();
