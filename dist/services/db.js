@@ -7,13 +7,11 @@ exports.SQLiteDB = exports.mariaDB = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const mariaDB = {
-    client: 'mysql2',
+    client: 'sqlite3',
     connection: {
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: 'coderhouse',
+        filename: './DB/e-commerce.sqlite',
     },
+    useNullAsDefault: true,
 };
 exports.mariaDB = mariaDB;
 const SQLiteDB = {

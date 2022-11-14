@@ -17,7 +17,7 @@ const db_1 = require("../services/db");
 const products_1 = __importDefault(require("../services/products"));
 // Instancio la clase, pasando al constructor el objeto con los datos de configuración de mariaDB
 // y el nombre de la tabla que va a utilizar
-const sql = new products_1.default(db_1.mariaDB, 'products');
+const sql = new products_1.default(db_1.SQLiteDB, 'products');
 const add = (prod) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         return yield sql.createProduct(prod);
